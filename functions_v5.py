@@ -24,7 +24,7 @@ def get_uri(sp, title, artist):
         return None
     else:
         for i in range(len(results['tracks']['items'])):
-            if (artist==results['tracks']['items'][i]['album']['artists'][0]['name']) and (title==results['tracks']['items'][i]['name']):
+            if (artist==results['tracks']['items'][i]['album']['artists'][0]['name'].title()) and (title==results['tracks']['items'][i]['name'].title()):
                 return results['tracks']['items'][i]['uri']  
             
         return None
